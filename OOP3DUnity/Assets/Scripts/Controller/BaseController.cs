@@ -7,19 +7,21 @@
 		public virtual void On()
 		{
 			On(null);
+            
 		}
 
 		public virtual void On(BaseObjectScene obj)
 		{
 			IsActive = true;
+            
 		}
 
 		public virtual void Off()
 		{
 			IsActive = false;
-		}
+        }
 
-		public void Switch()
+        public void Switch()
 		{
 			if (IsActive)
 			{

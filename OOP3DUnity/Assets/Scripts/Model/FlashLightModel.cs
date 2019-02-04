@@ -11,8 +11,12 @@ namespace Geekbrains
         public float BatteryChargeMax { get; private set; }
         [SerializeField] private float _speed = 10;
 		[SerializeField] private float _batteryChargeMax;
+        [SerializeField] private float _intensity = 1.5f;
 
-		protected override void Awake()
+        private float _share;
+        private float _takeAwayTheIntensity;
+
+        protected override void Awake()
 		{
 			base.Awake();
 			_light = GetComponent<Light>();
@@ -20,6 +24,9 @@ namespace Geekbrains
 			_vecOffset = transform.position - _goFollow.position;
 			BatteryChargeCurrent = _batteryChargeMax;
             BatteryChargeMax = _batteryChargeMax;
+            _light.intensity = _intensity;
+            _share = _batteryChargeMax / 4;
+            _takeAwayTheIntensity = _intensity / (_batteryChargeMax * 100);
         }
 
 		public void Switch(bool value)
@@ -50,13 +57,21 @@ namespace Geekbrains
         #endregion        
 
         public bool EditBatteryCharge()
-		{
-			if (BatteryChargeCurrent > 0)
-			{
-				BatteryChargeCurrent -= Time.deltaTime;
-                return true;
-			}
+        {
+            if (BatteryChargeCurrent > 0)
+            {
+                BatteryChargeCurrent -= Time.deltaTime;
 
+                if (BatteryChargeCurrent < _share)
+                {
+                    _light.enabled = Random.Range(0, 100) >= Random.Range(0, 10);
+                }
+                else
+                {
+                    _light.intensity -= _takeAwayTheIntensity;
+                }
+                return true;
+            }
             return false;
 		}
 	}
