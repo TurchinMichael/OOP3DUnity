@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hp: 100
+  isPotected: 0
 --- !u!65 &61638541
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -309,6 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hp: 100
+  isPotected: 0
 --- !u!65 &122648362
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -767,8 +769,9 @@ MonoBehaviour:
   k_Drag: 10
   k_AngularDrag: 5
   k_Distance: 0.2
-  distanceToObject: 3
+  distanceToObject: 4
   throwForce: 1000
+  distance: 2
 --- !u!1 &494884213
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,6 +1146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hp: 100
+  isPotected: 0
 --- !u!65 &594580403
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1201,6 +1205,64 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 594580400}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &609093622
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8754307994940591091, guid: 88a91070938efcc4baef08f59fbb42d9,
+        type: 3}
+      propertyPath: m_Name
+      value: UMP-45 D
+      objectReference: {fileID: 0}
+    - target: {fileID: 36915202, guid: 88a91070938efcc4baef08f59fbb42d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.843
+      objectReference: {fileID: 0}
+    - target: {fileID: 36915202, guid: 88a91070938efcc4baef08f59fbb42d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.745
+      objectReference: {fileID: 0}
+    - target: {fileID: 36915202, guid: 88a91070938efcc4baef08f59fbb42d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.956
+      objectReference: {fileID: 0}
+    - target: {fileID: 36915202, guid: 88a91070938efcc4baef08f59fbb42d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.15902849
+      objectReference: {fileID: 0}
+    - target: {fileID: 36915202, guid: 88a91070938efcc4baef08f59fbb42d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.04838939
+      objectReference: {fileID: 0}
+    - target: {fileID: 36915202, guid: 88a91070938efcc4baef08f59fbb42d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.3494053
+      objectReference: {fileID: 0}
+    - target: {fileID: 36915202, guid: 88a91070938efcc4baef08f59fbb42d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9221087
+      objectReference: {fileID: 0}
+    - target: {fileID: 36915202, guid: 88a91070938efcc4baef08f59fbb42d9, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 36915202, guid: 88a91070938efcc4baef08f59fbb42d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 15.0390005
+      objectReference: {fileID: 0}
+    - target: {fileID: 36915202, guid: 88a91070938efcc4baef08f59fbb42d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -11.975
+      objectReference: {fileID: 0}
+    - target: {fileID: 36915202, guid: 88a91070938efcc4baef08f59fbb42d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -43.092003
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 88a91070938efcc4baef08f59fbb42d9, type: 3}
 --- !u!4 &677419163 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4848776309249923882, guid: 9bd1c323c82ffcd44971d8175822ccd3,
@@ -1363,6 +1425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hp: 100
+  isPotected: 0
 --- !u!65 &788538880
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1469,6 +1532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hp: 100
+  isPotected: 0
 --- !u!65 &950848590
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1791,6 +1855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hp: 100
+  isPotected: 1
 --- !u!65 &1154402149
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2654,6 +2719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hp: 100
+  isPotected: 1
 --- !u!65 &2085880168
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1,6 +1,6 @@
 ﻿namespace Geekbrains
 {
-	public abstract class BaseController
+	public abstract class BaseController  : Main // фигня
 	{
 		public bool IsActive { get; private set; }
 
@@ -33,6 +33,6 @@
 			}
 		}
 
-		public abstract void OnUpdate();
+        public abstract void OnUpdate();
 	}
 }

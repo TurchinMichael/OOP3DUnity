@@ -11,8 +11,9 @@ namespace Geekbrains
         [SerializeField] float k_Drag = 10.0f;
         [SerializeField] float k_AngularDrag = 5.0f;
         [SerializeField] float k_Distance = 0.2f;
-        [SerializeField] float distanceToObject = 3f;
+        [SerializeField] float distanceToObject = 4f;
         [SerializeField] float throwForce = 1000f;
+        [SerializeField] float distance = 2f;
 
         const bool k_AttachToCenterOfMass = false;
 
@@ -37,7 +38,7 @@ namespace Geekbrains
 
 
 
-        // public override void OnUpdate()
+        //  public override void OnUpdate()  public void Update()
         public void Update()
         {
 
@@ -98,11 +99,9 @@ namespace Geekbrains
             //MainCoroutine(0);//"DragObject", hit.distance);
 
             //base.MainCoroutine(0);//запуск первой доступной корутины
-            StartCoroutine(nameof(DragObject), hit.distance);
-
-
-
-
+            //DoStartCoroutine(/*nameof(*/DragObject()/*), hit.distance*/);
+            //DoStartCoroutine(nameof(DragObject));
+            StartCoroutine(nameof(DragObject));
             //    MonoBehaviour monoBehaviour = new MonoBehaviour();
             //monoBehaviour.StartCoroutine(nameof(DragObject), hit.distance);
             //MonoBehaviour.Instantiate.StartCoroutine(nameof(DragObject), hit.distance);
@@ -110,7 +109,7 @@ namespace Geekbrains
 
 
 
-        private IEnumerator DragObject(float distance)
+        private IEnumerator DragObject(/*float distance*/)
         {
             var oldDrag = m_SpringJoint.connectedBody.drag;
             //Debug.Log(oldDrag);

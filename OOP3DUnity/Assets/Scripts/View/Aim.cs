@@ -8,17 +8,24 @@ namespace Geekbrains
 		public event Action OnPointChange;
 
 		public float Hp = 100;
+        public bool isPotected;
+
 		private bool _isDead;
 		// дописать поглащение урона
 		public void SetDamage(InfoCollision info)
 		{
 			if (_isDead) return;
 			if (Hp > 0)
-			{
-				Hp -= info.Damage;
-			}
+            {
+                #region 5. Добавить изменения текущего урона, который может нанести пуля. / 4. Добавить двух противников с разной обработкой получения урона.
+                if (!isPotected)
+                    Hp -= info.Damage * 2;
+                else
+                    Hp -= info.Damage;
+                #endregion
+            }
 
-			if (Hp <= 0)
+            if (Hp <= 0)
 			{
 				var tempRigidbody = GetComponent<Rigidbody>();
 				if (!tempRigidbody)

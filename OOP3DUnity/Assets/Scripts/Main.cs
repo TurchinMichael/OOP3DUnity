@@ -34,11 +34,12 @@ namespace Geekbrains
 			FlashLightController = new FlashLightController();
 			InputController = new InputController();
 			InputController.On();
-            OutlinedController = new OutlinedController(); // новый
+            OutlinedController = new OutlinedController();
             WeaponController = new WeaponController();
 
 
            // DragRigidbodyController = new DragRigidbodyController();
+
 
             Controllers = new BaseController[5];
 			Controllers[0] = FlashLightController;
@@ -46,6 +47,7 @@ namespace Geekbrains
 			Controllers[2] = PlayerController;
             Controllers[3] = OutlinedController;
             Controllers[4] = WeaponController;
+
 
 
             //Controllers[5] = DragRigidbodyController;
@@ -59,5 +61,17 @@ namespace Geekbrains
 				controller.OnUpdate();
 			}
         }
+
+
+        //public void DoStartCoroutine(IEnumerator routine)
+        //{ StartCoroutine(routine); }
+
+        //public void DoStartCoroutine(string routine)
+        //{ StartCoroutine(routine); }
+        //public void DoStartCoroutine(string routine, float parameter)
+        //{ StartCoroutine(routine, parameter); }
+
+        //static void DoStopCoroutine(IEnumerator routine)
+        //{ StopCoroutine(routine); }
     }
 }

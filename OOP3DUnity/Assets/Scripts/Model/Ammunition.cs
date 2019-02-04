@@ -29,7 +29,15 @@ namespace Geekbrains
 			Rigidbody.AddForce(dir);
 		}
 
-		protected void LossOfDamage()
+
+        //#region 5. Добавить изменения текущего урона, который может нанести пуля.
+        //protected void SetLossOfDamage(float damage)
+        //{
+        //    _curDamage -= damage;
+        //}
+        //#endregion
+
+        protected void LossOfDamage()
 		{
 			_curDamage -= _lossOfDamageAtTime;
 		}
