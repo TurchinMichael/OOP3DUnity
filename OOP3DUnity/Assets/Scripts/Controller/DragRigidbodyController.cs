@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Geekbrains
 {
-    public class DragRigidbodyController : MonoBehaviour
+    public class DragRigidbodyController : BaseController
     {
         public LayerMask customPhysicLayer;
         [SerializeField] float k_Spring = 50.0f; // >> private and next
@@ -39,7 +39,7 @@ namespace Geekbrains
 
 
         //  public override void OnUpdate()  public void Update()
-        public void Update()
+        public override void OnUpdate()
         {
 
             // Debug.Log(customPhysicLayer.value);
@@ -101,10 +101,11 @@ namespace Geekbrains
             //base.MainCoroutine(0);//запуск первой доступной корутины
             //DoStartCoroutine(/*nameof(*/DragObject()/*), hit.distance*/);
             //DoStartCoroutine(nameof(DragObject));
-            StartCoroutine(nameof(DragObject));
+            //StartCoroutine(nameof(DragObject));
             //    MonoBehaviour monoBehaviour = new MonoBehaviour();
             //monoBehaviour.StartCoroutine(nameof(DragObject), hit.distance);
             //MonoBehaviour.Instantiate.StartCoroutine(nameof(DragObject), hit.distance);
+            Main.Instance.DoStartCoroutine(DragObject());
         }
 
 
