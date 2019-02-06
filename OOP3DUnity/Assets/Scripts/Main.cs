@@ -12,7 +12,7 @@ namespace Geekbrains
         public WeaponController WeaponController { get; private set; }
 
 
-        //public DragRigidbodyController DragRigidbodyController { get; private set; }
+        public DragRigidbodyController DragRigidbodyController { get; private set; }
 
 
         public ObjectManager ObjectManager { get; private set; }
@@ -38,10 +38,10 @@ namespace Geekbrains
             WeaponController = new WeaponController();
 
 
-           // DragRigidbodyController = new DragRigidbodyController();
+            DragRigidbodyController = new DragRigidbodyController();
 
 
-            Controllers = new BaseController[5];
+            Controllers = new BaseController[6];
 			Controllers[0] = FlashLightController;
 			Controllers[1] = InputController;
 			Controllers[2] = PlayerController;
@@ -50,7 +50,7 @@ namespace Geekbrains
 
 
 
-            //Controllers[5] = DragRigidbodyController;
+            Controllers[5] = DragRigidbodyController;
         }
 
 		private void Update()
@@ -63,8 +63,8 @@ namespace Geekbrains
         }
 
 
-        //public void DoStartCoroutine(IEnumerator routine)
-        //{ StartCoroutine(routine); }
+        public void DoStartCoroutine(IEnumerator routine)
+        { StartCoroutine(routine); }
 
         //public void DoStartCoroutine(string routine)
         //{ StartCoroutine(routine); }
