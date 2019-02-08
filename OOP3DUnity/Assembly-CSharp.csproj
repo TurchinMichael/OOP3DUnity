@@ -60,6 +60,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AI\AICharacterControl.cs" />
+    <Compile Include="Assets\Scripts\AI\TestNavMesh.cs" />
+    <Compile Include="Assets\Scripts\AI\ThirdPersonCharacter.cs" />
+    <Compile Include="Assets\Scripts\AI\ThirdPersonUserControl.cs" />
     <Compile Include="Assets\Scripts\Component\onMouseLight.cs" />
     <Compile Include="Assets\Scripts\Component\SelfDestroy.cs" />
     <Compile Include="Assets\Scripts\Controller\BaseController.cs" />
@@ -670,6 +674,12 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.4f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{DDE0C273-3712-E080-3F65-AB4FD9CB0D08}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
