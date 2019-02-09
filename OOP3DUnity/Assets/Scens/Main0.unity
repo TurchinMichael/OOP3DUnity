@@ -2588,7 +2588,7 @@ GameObject:
   - component: {fileID: 235644684}
   - component: {fileID: 235644683}
   - component: {fileID: 235644682}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3424,6 +3424,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315821232}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &320126550 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 113348, guid: 1b8dc738acde8d648ae5f6d3e8aa89fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1642396975}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &322253881
 GameObject:
   m_ObjectHideFlags: 0
@@ -5608,7 +5614,7 @@ GameObject:
   - component: {fileID: 527223781}
   - component: {fileID: 527223780}
   - component: {fileID: 527223779}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10397,7 +10403,7 @@ GameObject:
   - component: {fileID: 933919817}
   - component: {fileID: 933919816}
   - component: {fileID: 933919815}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13899,10 +13905,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12a65ca337eb5184eb474130a11d9018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetS:
-  - {fileID: 685568059}
-  - {fileID: 1882906809}
-  - {fileID: 877627584}
+  targetS: []
+  maxPointsCount: 4
+  setTarget: {fileID: 320126550}
 --- !u!120 &1294117287
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -17362,6 +17367,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AIThirdPersonController
       objectReference: {fileID: 0}
+    - target: {fileID: 113348, guid: 1b8dc738acde8d648ae5f6d3e8aa89fc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 436670, guid: 1b8dc738acde8d648ae5f6d3e8aa89fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -49.5
@@ -17454,10 +17463,14 @@ PrefabInstance:
       propertyPath: m_StoppingDistance
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 19597056, guid: 1b8dc738acde8d648ae5f6d3e8aa89fc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 11402594, guid: 1b8dc738acde8d648ae5f6d3e8aa89fc, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1642954994}
+      objectReference: {fileID: 0}
     - target: {fileID: 11450346, guid: 1b8dc738acde8d648ae5f6d3e8aa89fc, type: 3}
       propertyPath: m_GroundCheckDistance
       value: 0.4
@@ -17563,7 +17576,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642954989}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -45.49, y: 43.75, z: 57.48}
+  m_LocalPosition: {x: -45.5, y: 43.74, z: 57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 398322229}
@@ -17671,7 +17684,7 @@ GameObject:
   - component: {fileID: 1659045410}
   - component: {fileID: 1659045409}
   - component: {fileID: 1659045408}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20011,7 +20024,7 @@ GameObject:
   - component: {fileID: 1876282549}
   - component: {fileID: 1876282548}
   - component: {fileID: 1876282547}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
