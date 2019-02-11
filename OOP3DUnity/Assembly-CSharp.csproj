@@ -61,12 +61,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AI\AICharacterControl.cs" />
+    <Compile Include="Assets\Scripts\AI\bot\BodyBot.cs" />
+    <Compile Include="Assets\Scripts\AI\bot\Bot.cs" />
+    <Compile Include="Assets\Scripts\AI\bot\HeadBot.cs" />
+    <Compile Include="Assets\Scripts\AI\bot\Patrol.cs" />
+    <Compile Include="Assets\Scripts\AI\bot\Vision.cs" />
     <Compile Include="Assets\Scripts\AI\TestNavMesh.cs" />
     <Compile Include="Assets\Scripts\AI\ThirdPersonCharacter.cs" />
     <Compile Include="Assets\Scripts\AI\ThirdPersonUserControl.cs" />
     <Compile Include="Assets\Scripts\Component\onMouseLight.cs" />
     <Compile Include="Assets\Scripts\Component\SelfDestroy.cs" />
     <Compile Include="Assets\Scripts\Controller\BaseController.cs" />
+    <Compile Include="Assets\Scripts\Controller\BotController.cs" />
     <Compile Include="Assets\Scripts\Controller\DragRigidbodyController.cs" />
     <Compile Include="Assets\Scripts\Controller\FlashLightController.cs" />
     <Compile Include="Assets\Scripts\Controller\InputController.cs" />
@@ -75,9 +81,11 @@
     <Compile Include="Assets\Scripts\Controller\WeaponController.cs" />
     <Compile Include="Assets\Scripts\Enum\AmmunitionType.cs" />
     <Compile Include="Assets\Scripts\Enum\MouseButton.cs" />
+    <Compile Include="Assets\Scripts\Enum\StateBot.cs" />
     <Compile Include="Assets\Scripts\Helper\InfoCollision.cs" />
     <Compile Include="Assets\Scripts\Helper\Timer.cs" />
     <Compile Include="Assets\Scripts\Interface\IDestination.cs" />
+    <Compile Include="Assets\Scripts\Interface\IDestroyable.cs" />
     <Compile Include="Assets\Scripts\Interface\IMotor.cs" />
     <Compile Include="Assets\Scripts\Interface\ISetDamage.cs" />
     <Compile Include="Assets\Scripts\Interface\ISetTarget.cs" />
@@ -102,19 +110,19 @@
     <Compile Include="Assets\Scripts\View\WeaponUiText.cs" />
     <None Include="Assets\Materials\Outline.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>X:/GIT/OOP3DUnity/OOP3DUnity/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Git/OOP3DUnity/OOP3DUnity/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>X:/GIT/OOP3DUnity/OOP3DUnity/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/Git/OOP3DUnity/OOP3DUnity/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>X:/GIT/OOP3DUnity/OOP3DUnity/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/Git/OOP3DUnity/OOP3DUnity/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>X:/GIT/OOP3DUnity/OOP3DUnity/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Git/OOP3DUnity/OOP3DUnity/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>X:/GIT/OOP3DUnity/OOP3DUnity/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>D:/Git/OOP3DUnity/OOP3DUnity/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -318,19 +326,19 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.4f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements">
-      <HintPath>X:/GIT/OOP3DUnity/OOP3DUnity/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
+      <HintPath>D:/Git/OOP3DUnity/OOP3DUnity/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements.Editor">
-      <HintPath>X:/GIT/OOP3DUnity/OOP3DUnity/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
+      <HintPath>D:/Git/OOP3DUnity/OOP3DUnity/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>X:/GIT/OOP3DUnity/OOP3DUnity/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>D:/Git/OOP3DUnity/OOP3DUnity/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>X:/GIT/OOP3DUnity/OOP3DUnity/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>D:/Git/OOP3DUnity/OOP3DUnity/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>X:/GIT/OOP3DUnity/OOP3DUnity/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>D:/Git/OOP3DUnity/OOP3DUnity/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.4f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

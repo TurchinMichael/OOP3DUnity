@@ -10,6 +10,7 @@ namespace Geekbrains
 
 		public Ammunition Ammunition;
 		public Clip Clip;
+		//public int ClipSize = 5;
 
         public int GetSetMaxCountAmmunition
         {

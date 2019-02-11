@@ -13,9 +13,9 @@ namespace Geekbrains
             // дописать доп урон
             #region 5. Добавить изменения текущего урона, который может нанести пуля.
             if (!doubleDamage)
-                tempObj?.SetDamage(new InfoCollision(_curDamage, Rigidbody.velocity));
+                tempObj?.SetDamage(new InfoCollision(_curDamage, collision.contacts[0], collision.transform, Rigidbody.velocity));
             else
-                tempObj?.SetDamage(new InfoCollision(_curDamage * 2, Rigidbody.velocity));
+                tempObj?.SetDamage(new InfoCollision(_curDamage * 2, collision.contacts[0], collision.transform, Rigidbody.velocity));
             #endregion
 
             //var tempObj1 = collision.gameObject.GetComponent<IDefence>();

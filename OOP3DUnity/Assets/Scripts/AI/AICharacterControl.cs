@@ -42,7 +42,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
                 if (Vector3.Distance(transform.position, target.position) < agent.stoppingDistance)//target.position - transform.position > agent.stoppingDistance)
                 {
-                    target.GetComponent<IDestination>().DestroySelf(); // пришел
+                    target.GetComponent<IDestination>().DestroySelfAfterCome(); // пришел
                     //Debug.Log(name);
                 }
             }
