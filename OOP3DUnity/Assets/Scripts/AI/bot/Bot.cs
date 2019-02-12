@@ -24,7 +24,10 @@ namespace Geekbrains
 
 			var headBot = GetComponentInChildren<HeadBot>();
 			if (headBot != null) headBot.OnApplyDamageChange += SetDamage;
-		}
+
+            tag = "Enemy"; // tag
+            gameObject.AddComponent<Rigidbody>(); // rb
+        }
 
 		public void Tick()
 		{

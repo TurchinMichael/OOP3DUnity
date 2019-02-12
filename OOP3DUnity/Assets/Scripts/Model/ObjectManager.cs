@@ -14,12 +14,12 @@ namespace Geekbrains
 		{
 			_weapons = Main.Instance.Player.GetComponentsInChildren<Weapon>();
 
-            Debug.Log("Чет не работает");
+            Debug.Log("Чет оружие не работает");
 
             foreach (var weapon in Weapons)
 			{
 				weapon.IsVisible = false;
-                Debug.Log("Чет не работает");
+                Debug.Log("Чет оружие не работает");
 			}
 
 			FlashLight = MonoBehaviour.FindObjectOfType<FlashLightModel>();

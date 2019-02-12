@@ -8,6 +8,7 @@ TagManager:
   - colorChange
   - physicChange
   - wallOff
+  - Enemy
   layers:
   - Default
   - TransparentFX
