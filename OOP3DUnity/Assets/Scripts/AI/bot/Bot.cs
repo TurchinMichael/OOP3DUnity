@@ -31,7 +31,7 @@ namespace Geekbrains
 
 		public void Tick()
 		{
-			Debug.Log(_stateBot);
+			//Debug.Log(_stateBot);
 			if (_stateBot == StateBot.Died) return;
 
 			if (_stateBot != StateBot.Detected)

@@ -17,6 +17,7 @@ namespace Geekbrains
                 Heal(collision);
 
                 Debug.Log("Heal");
+                Destroy();
             }
         }
 
