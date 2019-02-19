@@ -82,10 +82,12 @@
     <Compile Include="Assets\Scripts\Enum\AmmunitionType.cs" />
     <Compile Include="Assets\Scripts\Enum\MouseButton.cs" />
     <Compile Include="Assets\Scripts\Enum\StateBot.cs" />
+    <Compile Include="Assets\Scripts\extensions\Extensions.cs" />
     <Compile Include="Assets\Scripts\Helper\InfoCollision.cs" />
     <Compile Include="Assets\Scripts\Helper\Timer.cs" />
     <Compile Include="Assets\Scripts\Interface\IAid.cs" />
     <Compile Include="Assets\Scripts\Interface\IBomb.cs" />
+    <Compile Include="Assets\Scripts\Interface\IData.cs" />
     <Compile Include="Assets\Scripts\Interface\IDestination.cs" />
     <Compile Include="Assets\Scripts\Interface\IDestroyable.cs" />
     <Compile Include="Assets\Scripts\Interface\IMotor.cs" />
@@ -103,8 +105,11 @@
     <Compile Include="Assets\Scripts\Model\MyBullet.cs" />
     <Compile Include="Assets\Scripts\Model\MyGun.cs" />
     <Compile Include="Assets\Scripts\Model\ObjectManager.cs" />
+    <Compile Include="Assets\Scripts\Model\Player.cs" />
     <Compile Include="Assets\Scripts\Model\UnitMotor.cs" />
     <Compile Include="Assets\Scripts\Model\Weapon.cs" />
+    <Compile Include="Assets\Scripts\StreamData.cs" />
+    <Compile Include="Assets\Scripts\TestData.cs" />
     <Compile Include="Assets\Scripts\View\Aim.cs" />
     <Compile Include="Assets\Scripts\View\AimUiText.cs" />
     <Compile Include="Assets\Scripts\View\Destination.cs" />
