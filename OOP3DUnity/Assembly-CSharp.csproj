@@ -60,8 +60,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\cave_troll\scripts\camera_follow.cs" />
     <Compile Include="Assets\ColorSkies\Demo\Scripts\LookCamera.cs" />
     <Compile Include="Assets\ColorSkies\Demo\Scripts\SkyboxChanger.cs" />
+    <Compile Include="Assets\Scripts\AI\AIAnimationCharacterControl.cs" />
     <Compile Include="Assets\Scripts\AI\AICharacterControl.cs" />
     <Compile Include="Assets\Scripts\AI\bot\BodyBot.cs" />
     <Compile Include="Assets\Scripts\AI\bot\Bot.cs" />
@@ -69,6 +71,7 @@
     <Compile Include="Assets\Scripts\AI\bot\Patrol.cs" />
     <Compile Include="Assets\Scripts\AI\bot\Vision.cs" />
     <Compile Include="Assets\Scripts\AI\TestNavMesh.cs" />
+    <Compile Include="Assets\Scripts\AI\ThirdAnimationPersonCharacter.cs" />
     <Compile Include="Assets\Scripts\AI\ThirdPersonCharacter.cs" />
     <Compile Include="Assets\Scripts\AI\ThirdPersonUserControl.cs" />
     <Compile Include="Assets\Scripts\Component\onMouseLight.cs" />
@@ -120,6 +123,7 @@
     <Compile Include="Assets\Scripts\View\UiInterface.cs" />
     <Compile Include="Assets\Scripts\View\WeaponUiText.cs" />
     <None Include="Assets\Materials\Outline.shader" />
+    <None Include="Assets\cave_troll\shaders\Standard Two Sided Soft Blend.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Git/OOP3DUnity/OOP3DUnity/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

@@ -33,11 +33,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                 agent.SetDestination(target.position);
 
                 if (agent.remainingDistance > agent.stoppingDistance)
+                {
                     character.Move(agent.desiredVelocity, false, false);
+                }
                 else
                 {
                     character.Move(Vector3.zero, false, false);
-
                 }
 
                 if (Vector3.Distance(transform.position, target.position) < agent.stoppingDistance)//target.position - transform.position > agent.stoppingDistance)
@@ -46,7 +47,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                     //Debug.Log(name);
                 }
             }
-
         }
 
 
