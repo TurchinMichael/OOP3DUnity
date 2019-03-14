@@ -22,13 +22,13 @@ namespace GeekBrains.Data
                 IsVisible = true
             };
 
-            Debug.Log(player.ToString());
+          //  Debug.Log(player.ToString());
 
             _data?.SetOptions(path);
             _data?.Save(player);
             var newPlayer = _data?.Load();
 
-            Debug.Log(newPlayer.ToString());
+          //  Debug.Log(newPlayer.ToString());
         }
     }
 }

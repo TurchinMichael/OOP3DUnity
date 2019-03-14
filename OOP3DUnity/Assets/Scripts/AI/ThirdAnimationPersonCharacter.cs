@@ -38,16 +38,38 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			m_CapsuleHeight = m_Capsule.height;
 			m_CapsuleCenter = m_Capsule.center;
 
-			m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+			m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ 
+                | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
 			m_OrigGroundCheckDistance = m_GroundCheckDistance;
 		}
 
         public void MoveAnimation(/*Vector3 move, bool crouch, bool jump*/)
         {
-            m_Animator.applyRootMotion = true;
+            //m_Animator.applyRootMotion = true;
             m_Animator.SetFloat("speed", 0.2f);
         }
 
+
+        //public void AttackFirstAnimation(/*Vector3 move, bool crouch, bool jump*/)
+        //{
+        //    //m_Animator.applyRootMotion = true;
+        //    m_Animator.SetTrigger("attack1");
+        //}
+
+        public void AttackAnimation(/*Vector3 move, bool crouch, bool jump*/)
+        {
+            System.Random rand = new System.Random();
+
+            int t = rand.Next(0, 2);
+
+            //m_Animator.
+
+            if (t == 0)
+                m_Animator.SetTrigger("attack1");
+            
+            if (t == 1)
+                m_Animator.SetTrigger("attack2");
+        }
 
         public void Move(Vector3 move, bool crouch, bool jump)
 		{
@@ -150,14 +172,17 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			// which affects the movement speed because of the root motion.
 			if (m_IsGrounded && move.magnitude > 0)
 			{
-				m_Animator.speed = m_AnimSpeedMultiplier;
-                //m_Animator.SetFloat("speed", m_AnimSpeedMultiplier);
+                //m_Animator.speed = m_AnimSpeedMultiplier;
+                Debug.Log(m_AnimSpeedMultiplier);
+                m_Animator.SetFloat("speed", m_AnimSpeedMultiplier);
             }
 			else
 			{
-				// don't use that while airborne
-				m_Animator.speed = 1;
-			}
+                // don't use that while airborne
+                //m_Animator.speed = 1;
+                Debug.Log("stop");
+                m_Animator.SetFloat("speed", 0);
+            }
 		}
 
 
@@ -179,8 +204,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				// jump!
 				m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_JumpPower, m_Rigidbody.velocity.z);
 				m_IsGrounded = false;
-				m_Animator.applyRootMotion = false;
-                Debug.Log("Handle " + m_Animator.applyRootMotion);
+				//m_Animator.applyRootMotion = false;
+                //Debug.Log("Handle " + m_Animator.applyRootMotion);
                 m_GroundCheckDistance = 0.4f;                
 			}
 		}
@@ -193,22 +218,22 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 
-		public void OnAnimatorMove()
-		{
-			// we implement this function to override the default root motion.
-			// this allows us to modify the positional speed before it's applied.
-			if (m_IsGrounded && Time.deltaTime > 0)
-			{
-				Vector3 v = (m_Animator.deltaPosition * m_MoveSpeedMultiplier) / Time.deltaTime;
+        public void OnAnimatorMove() // applyrootmotion  handled by script
+        {
+            // we implement this function to override the default root motion.
+            // this allows us to modify the positional speed before it's applied.
+            if (m_IsGrounded && Time.deltaTime > 0)
+            {
+                Vector3 v = (m_Animator.deltaPosition * m_MoveSpeedMultiplier) / Time.deltaTime;
 
-				// we preserve the existing y part of the current velocity.
-				v.y = m_Rigidbody.velocity.y;
-				m_Rigidbody.velocity = v;
-			}
-		}
+                // we preserve the existing y part of the current velocity.
+                v.y = m_Rigidbody.velocity.y;
+                m_Rigidbody.velocity = v;
+            }
+        }
 
 
-		void CheckGroundStatus()
+        void CheckGroundStatus()
 		{
 			RaycastHit hitInfo;
 #if UNITY_EDITOR
@@ -221,15 +246,15 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			{
 				m_GroundNormal = hitInfo.normal;
 				m_IsGrounded = true;
-				m_Animator.applyRootMotion = true;
-                Debug.Log("Ground " + m_Animator.applyRootMotion);
+				//m_Animator.applyRootMotion = true;
+                //Debug.Log("Ground " + m_Animator.applyRootMotion);
             }
 			else
 			{
 				m_IsGrounded = false;
 				m_GroundNormal = Vector3.up;
-				m_Animator.applyRootMotion = false;
-                Debug.Log("Ground " + m_Animator.applyRootMotion);
+				//m_Animator.applyRootMotion = false;
+                //Debug.Log("Ground " + m_Animator.applyRootMotion);
             }
 		}
 	}

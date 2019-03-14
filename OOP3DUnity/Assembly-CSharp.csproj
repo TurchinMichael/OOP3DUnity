@@ -122,6 +122,7 @@
     <Compile Include="Assets\Scripts\View\FlashLightUiText.cs" />
     <Compile Include="Assets\Scripts\View\UiInterface.cs" />
     <Compile Include="Assets\Scripts\View\WeaponUiText.cs" />
+    <Compile Include="Assets\stepAudio.cs" />
     <None Include="Assets\Materials\Outline.shader" />
     <None Include="Assets\cave_troll\shaders\Standard Two Sided Soft Blend.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">

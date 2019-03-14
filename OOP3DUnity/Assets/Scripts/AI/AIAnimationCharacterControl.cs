@@ -10,8 +10,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
     {
         public UnityEngine.AI.NavMeshAgent agent { get; private set; }             // the navmesh agent required for the path finding
         public ThirdAnimationPersonCharacter character { get; private set; } // the character we are controlling
-        //public Vector3 target;                                    // target to aim for
+        public Vector3 targetVector;                                    // target to aim for
         public Transform target;                                    // target to aim for
+        public AudioSource _stepNoiseSource;
+        GameObject player;
+        Vision _vision;
 
 
 
@@ -20,16 +23,62 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             // get the components on the object we need ( should not be null due to require component so no need to check )
             agent = GetComponentInChildren<UnityEngine.AI.NavMeshAgent>();
             character = GetComponent<ThirdAnimationPersonCharacter>();
+            _stepNoiseSource = GetComponent<AudioSource>();
 
             //agent.updateRotation = false;
             //agent.updatePosition = true;
             agent.updateRotation = true;
-            //agent.updatePosition = false;
+            agent.updatePosition = true;
+
+            //target = Patrol.GenericPoint(1f);
+            //agent.SetDestination(Patrol.GenericPoint(1f));
+            createPointDestination();
         }
 
+        void createPointDestination()
+        {
+            targetVector = Patrol.GenericPoint(1f);
+            agent.SetDestination(targetVector);
+        }
+
+        public void StepPlay()
+        {
+            if (_stepNoiseSource)
+            {
+                _stepNoiseSource.Play();
+            }
+        }
 
         private void Update()
         {
+            if (targetVector != null)
+            {
+                //Debug.Log(Vector3.Distance(agent.transform.position, Main.Instance.Player.position));
+
+                if (Vector3.Distance(agent.transform.position, Main.Instance.Player.position) <= 8 && 
+                    Vector3.Angle(agent.transform.forward, Main.Instance.Player.position - agent.transform.position) <= 35)
+                {
+                    //Debug.Log("Close");
+                    
+                        character.AttackAnimation();
+
+                }
+
+                if (agent.remainingDistance > agent.stoppingDistance)
+                {
+                    //character.Move(agent.desiredVelocity, false, false);
+                    //character.(agent.desiredVelocity, false, false);
+                    character.MoveAnimation();
+                }
+                else
+                {
+                    character.Move(Vector3.zero, false, false);
+
+                    createPointDestination();
+                    Debug.Log("New Point Destination");
+                }
+            }
+             
             if (target != null)
             {
                 agent.SetDestination(target.position);
