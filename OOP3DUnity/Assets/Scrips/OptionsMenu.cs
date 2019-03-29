@@ -84,18 +84,21 @@ public class OptionsMenu : BaseMenu
         {
             LoadVideoOptions(/*Main.Instance.Scenes.Game.SceneAsset.name*/);
         });
-        
+        _video.SetInteractable(false);
+
         _sound.GetText.text = LangManager.Instance.Text("OptionsMenuItems", "Sound");
         _sound.GetControl.onClick.AddListener(delegate
         {
             LoadSoundOptions(/*Main.Instance.Scenes.Game.SceneAsset.name*/);
         });
+        _sound.SetInteractable(false);
 
         _game.GetText.text = LangManager.Instance.Text("OptionsMenuItems", "Game");
         _game.GetControl.onClick.AddListener(delegate
         {
             LoadGameOptions(/*Main.Instance.Scenes.Game.SceneAsset.name*/);
         });
+        _game.SetInteractable(false);
 
         _back.GetText.text = LangManager.Instance.Text("OptionsMenuItems", "Back");
         _back.GetControl.onClick.AddListener(delegate
@@ -125,15 +128,15 @@ public class OptionsMenu : BaseMenu
 
     private void LoadVideoOptions()
 	{
-		Interface.Execute(InterfaceObject.VideoOptions);		
+		//Interface.Execute(InterfaceObject.VideoOptions);		
 	}
 	private void LoadSoundOptions()
 	{
-		Interface.Execute(InterfaceObject.AudioOptions);
+		//Interface.Execute(InterfaceObject.AudioOptions);
 	}
 	private void LoadGameOptions()
 	{
-		Interface.Execute(InterfaceObject.GameOptions);
+		//Interface.Execute(InterfaceObject.GameOptions);
 	}
 	private void Back()
 	{
@@ -142,8 +145,9 @@ public class OptionsMenu : BaseMenu
 	public override void Hide()
 	{
 		if (!IsShow) return;
-		Clear(_elementsOfInterface);
-		IsShow = false;
+        _mainPanale.gameObject.SetActive(false);
+        //Clear(_elementsOfInterface);
+        IsShow = false;
 	}
 	public override void Show()
 	{

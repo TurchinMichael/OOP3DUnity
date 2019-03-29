@@ -118,14 +118,19 @@ public class MainMenu : BaseMenu
 		IsShow = true;
 	}
 
-	private void ShowOptions()
+    private void LoadNewGame(string lvl)
+    {
+        SceneManager.sceneLoaded += delegate { Main.Instance.InitGame(); };
+        Interface.LoadSceneAsync(lvl);
+    }
+
+    #region old
+
+    private void ShowOptions()
 	{
 		Interface.Execute(InterfaceObject.OptionsMenu);
-	}
+    }
 
-	private void LoadNewGame(string lvl)
-	{
-		SceneManager.sceneLoaded += delegate { Main.Instance.InitGame(); };
-		Interface.LoadSceneAsync(lvl);
-	}
+    #endregion
+
 }
