@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+//using Helper.Lesson_7;
 
 public class Interface : MonoBehaviour
 {
 	public InterfaceResources InterfaceResources { get; private set; }
 
-	private SliderUI _progressBar;
+    private SliderUI _progressBar;
 	private BaseMenu _currentMenu;
 
 	private Stack<InterfaceObject> _interfaceObjects = new Stack<InterfaceObject>(); // dz
@@ -75,16 +76,16 @@ public class Interface : MonoBehaviour
 			// _currentMenu.Show();
 			// break;
 			//case InterfaceObject.MenuPause:
-			// if (_currentMenu != null) _currentMenu.Hide();
-			// _currentMenu = _menuPause;
-			// _currentMenu.Show();
-			// break;
-			//case InterfaceObject.OptionsPauseMenu:
-			// if (_currentMenu != null) _currentMenu.Hide();
-			// _currentMenu = _optionsPauseMenu;
-			// _currentMenu.Show();
-			// break;
-			default:
+   //             _currentMenu = _menuPause;
+   //             break;
+            // _currentMenu.Show();
+            // break;
+            //case InterfaceObject.OptionsPauseMenu:
+            // if (_currentMenu != null) _currentMenu.Hide();
+            // _currentMenu = _optionsPauseMenu;
+            // _currentMenu.Show();
+            // break;
+            default:
 				break;
 		}
 

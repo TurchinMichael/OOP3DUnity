@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class InterfaceResources : MonoBehaviour {
 
@@ -7,11 +8,13 @@ public class InterfaceResources : MonoBehaviour {
 	public Canvas MainCanvas { get; private set; }
 	public LayoutGroup MainPanel { get; private set; }
 	public SliderUI ProgressbarPrefab { get; private set; }
-	private void Awake()
+    public AudioMixer AudioMixer { get; private set; }
+    private void Awake()
 	{
 		ButtonPrefab = Resources.Load<ButtonUi>("Button");
 		MainCanvas = FindObjectOfType<Canvas>();
 		ProgressbarPrefab = Resources.Load<SliderUI>("Progressbar");
 		MainPanel = MainCanvas.GetComponentInChildren<LayoutGroup>();
-	}
+        AudioMixer = Resources.Load<AudioMixer>("MainAudioMixer");
+    }
 }
