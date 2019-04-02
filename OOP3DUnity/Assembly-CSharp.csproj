@@ -131,12 +131,13 @@
     <Compile Include="Assets\Scrips\InterfaceObject.cs" />
     <Compile Include="Assets\Scrips\InterfaceResources.cs" />
     <Compile Include="Assets\Scrips\LangManager.cs" />
-    <Compile Include="Assets\Scrips\Main.cs" />
+    <Compile Include="Assets\Scrips\Main1.cs" />
     <Compile Include="Assets\Scrips\MainMenu.cs" />
     <Compile Include="Assets\Scrips\OptionsMenu.cs" />
     <Compile Include="Assets\Scrips\SceneFieldPropertyDrawer.cs" />
     <Compile Include="Assets\Scrips\Singleton.cs" />
     <Compile Include="Assets\Scrips\SliderUI.cs" />
+    <Compile Include="Assets\Scripts\AI\AIAnimationCharacterControl.cs" />
     <Compile Include="Assets\Scripts\AI\AICharacterControl.cs" />
     <Compile Include="Assets\Scripts\AI\bot\BodyBot.cs" />
     <Compile Include="Assets\Scripts\AI\bot\Bot.cs" />

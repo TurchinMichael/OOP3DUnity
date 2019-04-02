@@ -1,8 +1,8 @@
 ﻿using Helper;
 
-public class Main : Singleton<Main>
+public class Main1 : Singleton<Main1>
 {
-	protected Main() { }
+	protected Main1() { }
 
 	[System.Serializable]
 	public struct SceneDate
