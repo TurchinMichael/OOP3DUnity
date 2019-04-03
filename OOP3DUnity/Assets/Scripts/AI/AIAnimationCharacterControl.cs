@@ -12,7 +12,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         public ThirdAnimationPersonCharacter character { get; private set; } // the character we are controlling
         public Vector3 targetVector;                                    // target to aim for
         public Transform target;                                    // target to aim for
-        public AudioSource _stepNoiseSource;
+
+       // AudioSource _stepNoiseSource;
+        StepAudio _stepAudio;
         GameObject player;
         Vision _vision;
 
@@ -23,7 +25,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             // get the components on the object we need ( should not be null due to require component so no need to check )
             agent = GetComponentInChildren<UnityEngine.AI.NavMeshAgent>();
             character = GetComponent<ThirdAnimationPersonCharacter>();
-            _stepNoiseSource = GetComponent<AudioSource>();
+            //_stepNoiseSource = GetComponent<AudioSource>();
+            _stepAudio = GetComponent<StepAudio>();
 
             //agent.updateRotation = false;
             //agent.updatePosition = true;
@@ -43,9 +46,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         public void StepPlay()
         {
-            if (_stepNoiseSource)
+            if (/*_stepNoiseSource && */_stepAudio)
             {
-                _stepNoiseSource.Play();
+                _stepAudio.StepChangeAudio();
+                //_stepNoiseSource.Play();
             }
         }
 
@@ -75,7 +79,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                     character.Move(Vector3.zero, false, false);
 
                     createPointDestination();
-                    Debug.Log("New Point Destination");
+                    //Debug.Log("New Point Destination");
                 }
             }
              

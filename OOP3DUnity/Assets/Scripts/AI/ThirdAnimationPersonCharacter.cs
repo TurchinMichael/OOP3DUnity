@@ -173,14 +173,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			if (m_IsGrounded && move.magnitude > 0)
 			{
                 //m_Animator.speed = m_AnimSpeedMultiplier;
-                Debug.Log(m_AnimSpeedMultiplier);
+                //Debug.Log(m_AnimSpeedMultiplier);
                 m_Animator.SetFloat("speed", m_AnimSpeedMultiplier);
             }
 			else
 			{
                 // don't use that while airborne
                 //m_Animator.speed = 1;
-                Debug.Log("stop");
+                //Debug.Log("stop");
                 m_Animator.SetFloat("speed", 0);
             }
 		}

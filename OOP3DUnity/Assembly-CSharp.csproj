@@ -196,7 +196,7 @@
     <Compile Include="Assets\Scripts\View\FlashLightUiText.cs" />
     <Compile Include="Assets\Scripts\View\UiInterface.cs" />
     <Compile Include="Assets\Scripts\View\WeaponUiText.cs" />
-    <Compile Include="Assets\stepAudio.cs" />
+    <Compile Include="Assets\StepAudio.cs" />
     <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Fog.shader" />

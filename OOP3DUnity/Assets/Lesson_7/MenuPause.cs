@@ -51,7 +51,7 @@ namespace Geekbrains
                 Time.timeScale = 0;
                 Main.Instance.PlayerController.Off();
                 //Main.Instance.
-                Debug.Log(Time.timeScale);
+                //Debug.Log(Time.timeScale);
                 MainAudioMixer.SetFloat("BackgroundPitch", 2);
                 //FirstPersonController.enabled = false;
                 _snapshotPause.TransitionTo(0.001f);
@@ -64,7 +64,7 @@ namespace Geekbrains
             {
                 Main.Instance.PlayerController.On();
                 Time.timeScale = 1;
-                Debug.Log(Time.timeScale);
+               // Debug.Log(Time.timeScale);
                 MainAudioMixer.SetFloat("BackgroundPitch", startBackgroundPitch);
                 //FirstPersonController.enabled = true;
                 _snapshotUnPause.TransitionTo(0.001f);

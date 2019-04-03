@@ -4975,8 +4975,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27858953}
-  m_LocalRotation: {x: -0.02586167, y: 0.7905751, z: 0.03347047, w: 0.61090255}
-  m_LocalPosition: {x: -390.6565, y: 96.15715, z: 88.147446}
+  m_LocalRotation: {x: 0.076138735, y: 0.12408888, z: 0.009547257, w: -0.9892996}
+  m_LocalPosition: {x: 6.865368, y: 62.165123, z: 20.990444}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -25154,7 +25154,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 955910800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.156, y: 0, z: -0.196}
+  m_LocalPosition: {x: 0.156, y: 0.548, z: -0.196}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1325133740}
@@ -34848,7 +34848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetS: []
-  maxPointsCount: 4
+  maxPointsCount: 2
   setTarget: {fileID: 1325133738}
 --- !u!120 &1294117287
 LineRenderer:
@@ -40186,56 +40186,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
---- !u!114 &1325133744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325133738}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 946662303c723f7428823dc38a298c5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1325133746
 AudioSource:
   m_ObjectHideFlags: 0
@@ -40366,28 +40316,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a20e90debdfeab14ab7f380a00e4ea29, type: 3}
   - {fileID: 8300000, guid: 38f9177fedca8874b893342d145e1c24, type: 3}
   - {fileID: 8300000, guid: 100ec2dc4321239438da5fcdffc656a4, type: 3}
-  distanceToFloor: 20
+  distanceToFloor: 200
   stepRayStart: {fileID: 955910801}
---- !u!114 &1325133749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325133738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 452145abaa6f5f34a8c1f1946703ca7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MovingTurnSpeed: 360
-  m_StationaryTurnSpeed: 180
-  m_JumpPower: 12
-  m_GravityMultiplier: 2
-  m_RunCycleLegOffset: 0.2
-  m_MoveSpeedMultiplier: 1
-  m_AnimSpeedMultiplier: 1
-  m_GroundCheckDistance: 0.4
 --- !u!114 &1325133751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40402,7 +40332,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetVector: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
-  _stepNoiseSource: {fileID: 1325133746}
 --- !u!1 &1329420634
 GameObject:
   m_ObjectHideFlags: 0
@@ -57205,8 +57134,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105026724}
-  m_LocalRotation: {x: 0.07759768, y: -0.8552994, z: 0.13424873, w: 0.49438724}
-  m_LocalPosition: {x: 82.0685, y: 6.0099416, z: -6.8144264}
+  m_LocalRotation: {x: -0.1207851, y: 0.108196355, z: 0.013247861, w: 0.98667574}
+  m_LocalPosition: {x: 4.5644164, y: -4.88152, z: 21.042099}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
